@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<HTML LANG="en">
+
+<HEAD>
+    <Title>
+        Lists
+    </Title>
+</HEAD>
+
+<BODY>
+    <div id="main" role="main">
+        <h1>Lists</h1> This page provides a variety of lists to test proper behaviour with browsers and
+        <ABBR title="assistive technologies">ATs</ABBR>.
+        <p>
+            <h3>Single Level</h3>
+            <h4>UL</h4> The first list demonstrates an unsorted list. A peculiarity of UL and OL is that nothing normally goes inside the list tags except list items. If you place anything inside a UL or OL but not within the LI structure, it is still indented, like this use of the phrase "three fruit". Most
+            <ABBR title="assistive technologies">ATs</ABBR> will treat the phrase "three fruit" as part of the list, and may even label the list using this text, although that isn't part of the specification.
+            <ul>three fruit
+                <li>bananas</li>
+                <li>apples</li>
+                <li>oranges</li>
+            </ul>
+            <h4>OL</h4> The second list demonstrates an enumerated list. I'll give you three reasons you use this:
+            <ol>
+                <li>you want to indicate sequence</li>
+                <li>you want to rank or otherwise indicate order</li>
+                <li>you like numbers better than bullets, even though, as with this list, the numbering is pretty arbitrary</li>
+            </ol>
+            <h4>DL</h4> A definition list should be used exclusively for structuring definitions. Unlike the other lists, it consists of a three-part structure. There is the DL, which indicates the beginning and end of a definition list. Unlike OL and UL, text inside the DL but outside the inner tags is not immediately indented.
+            <dl>This text is inside the DL.
+                <dt>DT or Definition Term</dt>
+                <dd>The Term is the word or phrase being defined</dd <dt>DD, or Definition Description</dt>
+                <dd>The DD describes the term. In this example DL, there are two sets of terms and descriptions.</dd>
+            </dl>
+            <h3>Nested lists</h3> With a nested list, a new UL or OL is put inside an existing UL or OL. As with simple lists, the user agent will handle indentation and bullet variations.
+            <h4>Ingredients as nested list</h4>
+            <ul>
+                <li>Wet</li>
+                <ul>
+                    <li>Eggs</li>
+                    <li>Milk</li>
+                </ul>
+                <li>Dry</li>
+                <ul>
+                    <li>Flour</li>
+                    <li>Sugar</li>
+                    <li>Salt</li>
+                </ul>
+            </ul>
+            <h4>Instructions as nested list</h4>
+            <ol>
+                <li>Mix dry ingredients</li>
+                <ol>
+                    <li>Put 1 cup flour in bowl</li>
+                    <li>Add 1 Tbsp sugar</li>
+                    <li>Ad 1 tsp salt and mix</li>
+                </ol>
+                <li>Mix wet ingredients</li>
+                <ol>
+                    <li>Measure 1 cup milk</li>
+                    <li>Add a egg and blend</li>
+                </ol>
+                <li>Add wet ingredients into dry ingredients</li>
+            </ol>
+            <h4>Unordered tasks with ordered tasks nested</h4>
+            <ul>
+                <li>Rake the yard</li>
+                <li>Wash the clothes</li>
+                <ol>
+                    <li>Sort the clothes</li>
+                    <li>Set the washing machine correctly</li>
+                    <li>Add the detergent</li>
+                    <li>Start the machine</li>
+                </ol>
+                <li>Buy the groceries</li>
+            </ul>
+    </div>
+    <div id="navigation" role="navigation">
+      
+        <p>
+            <A HREF="index.html">Return to Home page.</A>
+            <p>
+    </div>
+</BODY>
+
+</HTML>
