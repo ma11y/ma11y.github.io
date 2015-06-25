@@ -1,10 +1,646 @@
 <!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+ 
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
 <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
 
-<body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
-    <p><a href="lists.html">Accessible lists</a>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
+        <title>Web Accessibility</title>
+    </head>
+    <body>
+        <div class="app">
+            <div id="deviceready" class="blink">
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+
+<!-- first page -->
+
+
+<div data-role="page" id="mainpage" data-add-back-btn="true">
+<div data-role="header" data-add-back-btn="true">
+    <h1>Web Accessibility</h1>
+<a href="html5.html">HTML 5</a>
+
+    <div data-role="collapsible">
+    <h2>ARIA (placeholder)</h2>
+    <ul data-role="listview">
+       <li><a href="#aria-landmark">Landmark</a></li>
+       <li><a href="#aria-labelledby">Labelledby</a></li>
+    </ul>
+    </div>
+
+    <div data-role="collapsible">
+    <h2>Jquery Mobile</h2>
+    <ul data-role="listview">
+      <li><a href="#jqm-button">Button</a></li>
+<li><a href="#jqm-checkbox">Checkbox</a></li>
+
+      <li><a href="#jqm-basic-popup">Basic Popup</a></li>
+<li><a href="#jqm-undismissible-popup">Undismissible popup</a></li>
+<li><a href="#jqm-navbar">Navbar</a></li>
+<li><a href="#jqm-tabs">Tabs</a></li>
+
+<li><a href="#jqm-flipswitch">Flip switch</a></li>
+<li><a href="#jqm-slider">Slider</a></li>
+<li><a href="#jqm-loader">Loader</a>
+<li><a href="#jqm-panel-above-header">Panel above header</a></li>
+<li><a href="#jqm-panel-below-header">Panel below header</a></li>
+<li><a href="#jqm-reflow-table">Reflow table</a></li>
+<li><a href="#jqm-toggle-table">Column toggle table</a></li>
+<li><a href="#jqm-listview">List view</a></li>
+<li><a href="#jqm-filter">Filter</a></li>
+    </ul>
+    </div>
+</div>
+
+  <div data-role="main" class="ui-content">
+
+<h2>Using this app</h2>
+<p>
+This app helps testers and developers understand how different web components behave on mobile devices. It contains sample components with testing results. When a new OS is released, the data will be updated.
+</p>
+<p>
+Some of the components are created, others were used or modified.
+</p>
+<p>
+The best way to use the app is experimenting with component behavior on different mobile devices, or modifying the code and see how the behavior changes.
+</p>
+<p>
+Note: in your CSS file, set:
+    text-transform:none;
+</p>
+
+
+<p>
+Resources:
+</ul>
+<li>W3 Schools</li>
+<li>jQuery Mobile demo site</li>
+</ul>
+
+</p>
+
+  </div>
+
+  <div data-role="footer">
+  </div>
+</div> 
+
+<div data-role="page" id="html5-edit" data-add-back-btn="true">
+<div data-role="header" data-add-back-btn="true">
+</div>
+<h3>Edit field</h3>
+<p>Edit field comes here</p>
+</div>
+
+
+<div data-role="page" id="html5-checkbox">
+<div data-role="header" data-add-back-btn="true">
+</div>
+<h3>Check box</h3>
+<p>Check box comes here</p>
+
+</div>
+
+<div data-role="page" id="aria-landmark">
+<div data-role="header" data-add-back-btn="true">
+</div>
+<h3>Landmark</h3>
+<p>Landmark comes here</p>
+</div>
+
+<div data-role="page" id="aria-labelledby">
+<div data-role="header" data-add-back-btn="true">
+</div>
+<h3>Labelledby</h3>
+<p>Labelledby comes here</p>
+</div>
+
+<div data-role="page" data-title="Button" id="jqm-button">
+<div data-role="header" data-add-back-btn="true">
+</div>
+  <div data-role="main" class="ui-content">
+<form>
+<input value="Button" type="button" name="button">
+<input value="Submit" type="submit">
+<input value="Reset" type="reset">
+</form>
+<p>
+When jQuery is loaded, buttons have two touchpoints. The first is the label of the button itself that cannot be activated. The second is the actual button, with the same label. This one functions properly. This solution is usable, but does not fully meet accessibility requirements.
+</p>
+<p>
+There is a solution where the label only shows up once, but it requires using a link with a button ARIA role. This only meets accessibility requirements if the link is also designed as a button. This can be achieved by using the jQuery ui-btn class for the link.
+</p>
+<a href="http://www.ibm.com" role="button" class="ui-btn">Link with button role</a>
+</div>
+
+
+</div>
+
+<div data-role="page" id="jqm-navbar">
+<div data-role="header" data-add-back-btn="true">
+</div>
+<h1>Navbar</h1>
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Page Two</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+    </div>
+
+    <p>My Content..</p>
+
+
+
+</div>
+
+
+<div data-role="page" data-title="Basic popup" id="jqm-basic-popup">
+<div data-role="header" data-add-back-btn="true">
+</div>
+
+  <div data-role="main" class="ui-content">
+<h1>Basic popup</h1>
+
+
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+    
+    <div data-role="popup" id="myPopup">
+      <p>This is a simple popup.</p>
+    </div>
+  </div>
+</div>
+
+
+<div data-role="page" id="jqm-undismissible-popup" data-title="undismissible popup">
+<div data-role="header" data-add-back-btn="true">
+</div>
+
+
+  <div data-role="main" class="ui-content">
+
+<h1>Undismissible popup</h1>
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+
+    <div data-role="popup" id="myPopup" class="ui-content" data-dismissible="false" style="max-width:400px;">
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+      <p>I am an undismissible button (data-dismissible="false). The only way to close me is by clicking on the close button, which is positioned at the top right corner. You cannot close me by clicking outside of me.</p>
+    </div>
+  </div>
+</div>
+
+<div data-role="page" id="jqm-flipswitch" data-title="Flip switch">
+<div data-role="header" data-add-back-btn="true">
+</div>
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="demoform.asp">
+      <label for="switch">Flip Toggle Switch:</label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+        <br>
+      <input type="submit" data-inline="true" value="Submit">
+    </form>
+  </div>
+</div>
+
+<div data-role="page" id="jqm-loader" data-title="Loader">
+<div data-role="header" data-add-back-btn="true">
+</div>
+
+<div role="main" class="ui-content">
+<div data-role="controlgroup">
+<button class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="false" data-msgtext="" data-icon="arrow-r" data-iconpos="right">Default
+loader</button>
+<button class="show-page-loading-msg" data-theme="b" data-textonly="true" data-textvisible="true" data-msgtext="Text only loader" data-icon="arrow-r" data-iconpos="right">Text
+only</button>
+<button class="show-page-loading-msg" data-theme="b" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme a" data-icon="arrow-r" data-iconpos="right">Theme
+a</button>
+<button class="show-page-loading-msg" data-theme="a" data-textonly="false" data-textvisible="true" data-msgtext="Loading theme b" data-icon="arrow-r" data-iconpos="right">Theme
+b</button>
+<button class="show-page-loading-msg" data-theme="b" data-textonly="true" data-textvisible="true" data-msgtext="Custom Loader" data-icon="arrow-r" data-html="<span
+class='ui-bar ui-overlay-a ui-corner-all'><img src='../_assets/images/jquery-logo.png' /><h2>is loading for you ...</h2></span>" data-iconpos="right">Custom
+HTML</button>
+<button class="hide-page-loading-msg" data-icon="delete" data-iconpos="right">Hide</button>
+</div>
+</div>
+<script>
+$(document).on( "click", ".show-page-loading-msg", function() {
+var $this = $( this ),
+  theme = $this.jqmData( "theme" ) || $.mobile.loader.prototype.options.theme,
+  msgText = $this.jqmData( "msgtext" ) || $.mobile.loader.prototype.options.text,
+  textVisible = $this.jqmData( "textvisible" ) || $.mobile.loader.prototype.options.textVisible,
+  textonly = !!$this.jqmData( "textonly" );
+  html = $this.jqmData( "html" ) || "";
+$.mobile.loading( 'show', {
+  text: msgText,
+  textVisible: textVisible,
+  theme: theme,
+  textonly: textonly,
+  html: html
+  });
+})
+.on( "click", ".hide-page-loading-msg", function() {
+  $.mobile.loading( "hide" );
+});
+</script>
+
+
+</div>
+
+
+<div data-role="page" id="jqm-slider" data-title="Slider">
+<div data-role="header" data-add-back-btn="true">
+</div>
+
+
+  <div data-role="main" class="ui-content">
+<form>
+    <label for="slider-1">Slider:</label>
+    <input name="slider-1" id="slider-1" min="0" max="100" value="50" type="range">
+</form>
+
+<div role="slider">
+<form>
+    <label for="slider-1">Slider:</label>
+    <input name="slider-1" id="slider-1" min="0" max="100" value="50" type="range" aria-valuemin="0" 
+aria-valuemax="100" aria-valuenow="20" aria-valuetext="20 percent">
+</form>
+
+
+</div>
+
+</div>
+</div>
+
+
+<div data-role="page" id="jqm-tabs" data-title="Tabs">
+<div data-role="header" data-add-back-btn="true">
+</div>
+
+
+  <div data-role="main" class="ui-content">
+<div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#one" data-ajax="false">one</a></li>
+      <li><a href="#two" data-ajax="false">two</a></li>
+      <li><a href="ajax-content-ignore.html" data-ajax="false">three</a></li>
+    </ul>
+  </div>
+  <div id="one" class="ui-body-d ui-content">
+    <h1>First tab contents</h1>
+  </div>
+  <div id="two">
+    <ul data-role="listview" data-inset="true">
+        <li><a href="#">Acura</a></li>
+        <li><a href="#">Audi</a></li>
+        <li><a href="#">BMW</a></li>
+        <li><a href="#">Cadillac</a></li>
+        <li><a href="#">Ferrari</a></li>
+    </ul>
+
+
+  </div>
+</div>
+
+</div>
+</div>
+
+
+<div data-role="page" id="jqm-panel-above-header" data-title="Panel above header">
+  <div data-role="panel" id="panelabove"> 
+    <h2>Panel Header</h2>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
+    <a href="#jqm-panel-above-header" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div> 
+
+  <div data-role="header" data-add-back-btn="true">
+    <h1>Page Header</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Click on the button below to open the Panel.</p>
+    <a href="#panelabove" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
+<p>
+Panels are generally accessible, however, it is important to note that the data-rel should be set to close. This will add a button to the panel that allows keyboard users to close the panel, otherwise it will only work using a swipe.
+</p>
+<p>
+The panel can be placed anywhere in the page code, but depending on the location, it will show at different places. When placed above the page header, the opened panel will show in the DOM before the header. When placed below the header, before the main content, the panel will render at the end of the page. See the panel below header page.
+</p>
+<p>
+It is important to provide verbal indication to the user that a panel is opening, as it may not be obvious where to look for the newly displayed information.
+</p>
+<p>
+The button used to open the panel, and the close button show as links. Therefore, it is more appropriate to add an ARIA button role to these links, for an example, see the panel below header page.
+</p>
+
+  </div>
+
+  <div data-role="footer">
+    <h1>Page Footer</h1>
+  </div> 
+</div> 
+
+
+<div data-role="page" id="jqm-panel-below-header" data-title="Panel below header">
+
+  <div data-role="header" data-add-back-btn="true">
+    <h1>Page Header</h1>
+  </div>
+  <div data-role="panel" id="panelbelow"> 
+    <h2>Panel Header</h2>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
+    <a href="#jqm-panel-below-header" data-rel="close" role="button" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div> 
+
+  <div data-role="main" class="ui-content">
+    <p>Click on the button below to open the Panel.</p>
+    <a href="#panelbelow" role="button" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>Page Footer</h1>
+  </div> 
+</div> 
+
+<div data-role="page" id="jqm-reflow-table" data-title="Reflow table">
+  <div data-role="header" data-add-back-btn="true">
+    <h1>Reflow Table</h1>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+    <table data-role="table" class="ui-responsive">
+      <thead>
+        <tr>
+          <th>CustomerID</th>
+          <th>CustomerName</th>
+          <th>ContactName</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>PostalCode</th>
+          <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Obere Str. 57</td>
+          <td>Berlin</td>
+          <td>12209</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Antonio Moreno Taquería</td>
+          <td>Antonio Moreno</td>
+          <td>Mataderos 2312</td>
+          <td>México D.F.</td>
+          <td>05023</td>
+          <td>Mexico</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Around the Horn</td>
+          <td>Thomas Hardy</td>
+          <td>120 Hanover Sq.</td>
+          <td>London</td>
+          <td>WA1 1DP</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Berglunds snabbköp</td>
+          <td>Christina Berglund</td>
+          <td>Berguvsvägen 8</td>
+          <td>Luleå</td>
+          <td>S-958 22</td>
+          <td>Sweden</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div> 
+
+<div data-role="page" id="jqm-toggle-table" data-title="Column toggle table">
+  <div data-role="header" data-add-back-btn="true">
+
+    <h1>Column Toggle Table</h1>
+  </div>
+  
+  <div data-role="main" class="ui-content">
+    <table data-role="table" data-mode="columntoggle" class="ui-responsive" data-column-btn-text="Click me to hide or shown columns!" id="myTable">
+      <thead>
+        <tr>
+          <th data-priority="6">CustomerID</th>
+          <th>CustomerName</th>
+          <th data-priority="1">ContactName</th>
+          <th data-priority="2">Address</th>
+          <th data-priority="3">City</th>
+          <th data-priority="4">PostalCode</th>
+          <th data-priority="5">Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Alfreds Futterkiste</td>
+          <td>Maria Anders</td>
+          <td>Obere Str. 57</td>
+          <td>Berlin</td>
+          <td>12209</td>
+          <td>Germany</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Antonio Moreno Taquería</td>
+          <td>Antonio Moreno</td>
+          <td>Mataderos 2312</td>
+          <td>México D.F.</td>
+          <td>05023</td>
+          <td>Mexico</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Around the Horn</td>
+          <td>Thomas Hardy</td>
+          <td>120 Hanover Sq.</td>
+          <td>London</td>
+          <td>WA1 1DP</td>
+          <td>UK</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Berglunds snabbköp</td>
+          <td>Christina Berglund</td>
+          <td>Berguvsvägen 8</td>
+          <td>Luleå</td>
+          <td>S-958 22</td>
+          <td>Sweden</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+<p>
+When the controls are activated, table elements cannot be found on screen using touch explore. They are still accessible using swipes or keyboard navigation.
+</p>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div>
+
+
+<div data-role="page" id="jqm-listview" data-title="List view">
+  <div data-role="header" data-add-back-btn="true">
+
+<h1>List view</h1>
+
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <h2>Ordered List:</h2>
+    <ol data-role="listview">
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+    </ol>
+    <h2>Unordered List:</h2>
+    <ul data-role="listview">
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+      <li><a href="#">List Item</a></li>
+    </ul>
+
+<h2>List without links</h2>
+    <ul data-role="listview" data-inset="true">
+<li>dog</li>
+<li>cat</li>
+<li>mouse</li>
+
+</ul>
+
+<p>
+VoiceOver reads the numbers before ordered list items, but there is no other way to tell that a component is a list.
+</p>
+<p>
+Currently the only way to indicate a list is by using ARIA. Even then the bullet and the item itself are different items.
+Tested with iOS 8.1.2)
+</p>
+
+<ul role="list">
+<li role="listitem">dog</li>
+<li role="listitem">cat</li>
+<li role="listitem">mouse</li>
+</ul>
+
+  </div>
+</div>
+
+
+
+<div data-role="page" id="jqm-filter" data-title="Filter">
+  <div data-role="header" data-add-back-btn="true">
+
+<h1>Filter</h1>
+
+  </div>
+
+
+  <div data-role="main" class="ui-content">
+    <h2>My Phonebook</h2>
+    <p>In this example, we have used the data-filtertext="fav" on "Adele". This means that you are no longer able to search for the list item "Adele" anymore. You can only find Adele by typing the keywords "f, a, v or fav".)</p>
+    <form class="ui-filterable">
+      <input id="myFilter" data-type="search">
+    </form>
+    <ul data-role="listview" data-filter="true" data-input="#myFilter" data-autodividers="true" data-inset="true">
+      <li data-filtertext="fav"><a href="#">Adele</a></li>
+      <li><a href="#">Agnes</a></li>
+      <li><a href="#">Albert</a></li>
+      <li><a href="#">Billy</a></li>
+      <li><a href="#">Bob</a></li>
+      <li><a href="#">Calvin</a></li>
+      <li><a href="#">Cameron</a></li>
+      <li><a href="#">Chloe</a></li>
+      <li><a href="#">Christina</a></li>
+      <li><a href="#">Diana</a></li>
+      <li><a href="#">Frank</a></li>
+      <li><a href="#">Gabriel</a></li>
+      <li><a href="#">Glen</a></li>
+      <li><a href="#">Ralph</a></li>
+      <li><a href="#">Valarie</a></li>
+    </ul>
+  </div>
+</div> 
+
+<div data-role="page" id="jqm-checkbox" data-title="Checkbox">
+  <div data-role="header" data-add-back-btn="true">
+
+<h1>Checkbox</h1>
+
+  </div>
+
+
+  <div data-role="main" class="ui-content">
+    <form method="post" action="demoform.asp">
+      <fieldset data-role="controlgroup">
+        <legend>Choose as many favorite colors as you'd like:</legend>
+          <label for="red">Red</label>
+          <input type="checkbox" name="favcolor" id="red" value="red">
+          <label for="green">Green</label>
+          <input type="checkbox" name="favcolor" id="green" value="green">
+          <label for="blue">Blue</label>
+          <input type="checkbox" name="favcolor" id="blue" value="blue">	
+      </fieldset>
+      <input type="submit" data-inline="true" value="Submit">
+    </form>
+  </div>
+</div>
+
+
+
 </body>
-
 </html>
+
