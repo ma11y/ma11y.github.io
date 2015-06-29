@@ -3,7 +3,7 @@
 
 <HEAD>
     <Title>
-        Lists
+        ARIA-required
     </Title>
 </HEAD>
 
@@ -12,19 +12,26 @@
 <a href="aria.html">ARIA</a>
 </p>
 
-<h1>ARIA describedby</h1>
+<h1>ARIA required</h1>
 
-<p>
-<a href="http://www.w3.org/TR/WCAG20-TECHS/aria">W3C ARIA techniques</a>
+<p>Source: <a href="http://www.w3.org/TR/WCAG20-TECHS/aria">ARIA techniques</a></p>
+<form action="#" method="post"  id="login1" onsubmit="return errorCheck1()">
+  <p>Note: [*]denotes mandatory field</p>
+  <p>
+    <label for="usrname">Login name: </label>
+    <input type="text" name="usrname" id="usrname" aria-required="true"/>[*]
+  </p>
+  <p>
+    <label for="pwd">Password</label>
+    <input type="password" name="pwd" id="pwd" size="12" aria-required="true" />[*]
+  </p>
+  <p>
+    <input type="submit" value="Login" id="next_btn" name="next_btn"/>
+  </p>
 
-</p>
-
-<button aria-label="Close" aria-describedby="descriptionClose"
-    onclick="myDialog.close()">X</button>
+</form>		
 
 
-<div id="descriptionClose">Closing this window will discard any information entered and
-    return you back to the main page</div>
 
 </BODY>
 </HTML>
