@@ -3,7 +3,7 @@
 
 <HEAD>
     <Title>
-        ARIA describedby
+        ARIA roles
     </Title>
 </HEAD>
 
@@ -12,19 +12,81 @@
 <a href="aria.html">ARIA</a>
 </p>
 
-<h1>ARIA describedby</h1>
+<h1>ARIA roles</h1>
 
 <p>
 Source: <a href="http://www.w3.org/TR/WCAG20-TECHS/aria">W3C ARIA techniques</a>
 
 </p>
 
-<button aria-label="Close" aria-describedby="descriptionClose"
-    onclick="myDialog.close()">X</button>
 
+Toolbar:
 
-<div id="descriptionClose">Closing this window will discard any information entered and
-    return you back to the main page</div>
+    <div role="toolbar"
+      tabindex="0" 
+      id="customToolbar" 
+      onkeydown="return optionKeyEvent(event);"
+      onkeypress="return optionKeyEvent(event);"
+      onclick="return optionClickEvent(event);"
+      onblur="hideFocus()"
+      onfocus="showFocus()"
+      > 
+      <img src="img/btn1.gif" 
+           role="button" 
+           tabindex="-1" 
+           alt="Home" 
+           id="b1" 
+           title="Home">
+      <img src="img/btn2.gif" 
+           role="button" 
+           tabindex="-1" 
+           alt="Refresh" 
+           id="b2" 
+           title="Refresh">
+     <img src="img/btn3.gif" 
+           role="button" 
+           tabindex="-1" 
+           alt="Help" 
+           id="b3" 
+           title="Help"> 
+ </div>  
+
+ARIA tree:
+<ul role="tree" tabindex="0">
+  <li role="treeitem">Birds</li>
+  <li role="treeitem">Cats
+    <ul role="group">
+      <li role="treeitem">Siamese</li>
+      <li role="treeitem">Tabby</li>
+    </ul>
+  </li>
+  <li role="treeitem">Dogs
+    <ul role="group">
+      <li role="treeitem">Small Breeds
+        <ul role="group">
+          <li role="treeitem">Chihuahua</li>
+          <li role="treeitem">Italian Greyhound</li>
+          <li role="treeitem">Japanese Chin</li>
+        </ul>
+      </li>
+      <li role="treeitem"">Medium Breeds
+        <ul role="group">
+          <li role="treeitem">Beagle</li>
+          <li role="treeitem">Cocker Spaniel</li>
+          <li role="treeitem">Pit Bull</li>
+        </ul>
+      </li>
+      <li role="treeitem">Large Breeds
+        <ul role="group">
+          <li role="treeitem">Afghan</li>
+          <li role="treeitem">Great Dane</li>
+          <li role="treeitem">Mastiff</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
 
 </BODY>
 </HTML>
