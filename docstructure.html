@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Document Structure</title>
+</head>
+<body>
+<div role="main">
+<p>
+<a href="html5.html">HTML5</a>
+</p>
+
+	<h1>Document Structure</h1>
+	<p>This is the start of the main document content.</p>
+	<div role="document">
+		<p>This is the start of a div with a role of "document". I would normally expect to only encounter static, non-interactive text inside a document region. JAWS announces the start and end of document regions (and indeed all the regions on this page) and documents are accessible via the region quick key (R). The region ends immediately after this sentence.</p>
+	</div>
+	<div role="article">
+		<p>This is the start of a div with a role of "article". An article may be associated with the main content but is arguably independent. Articles are surfaced with JAWS via the region quick key. In this way, an article is somewhat similar in nature to a complementary landmark. The most obvious analogy for an article is to think of a newspaper, which is made up on a series of articles. In the same way, a document region can be the parent for a bunch of articles. This is the last sentence of the article region.</p>
+	</div>
+	<div role="note">
+		<p>A note is defined as content "parenthetic or ancillary" to the main content. They are not surfaced by JAWS with the region quick key. I tend to think of notes being shorter and less involved than articles.</p>
+	</div>
+<form action="">
+<p>This is a form section I am just throwing in. Form sections are not regions and are not announced by JAWS. I am just putting a button in this form for something to get focus automatically when keyboarding.</p>
+<input type="submit" value="Clicking me does nothing"<br>
+</div>
+</body>
+</html>
