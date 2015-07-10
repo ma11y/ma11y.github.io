@@ -10,8 +10,7 @@
     function togglePressed() {
         var btn = document.getElementById("aria-button");
         var btnpressed = btn.getAttribute("aria-pressed");
-
-            
+        
         if (btnpressed == 'false') {
             document.getElementById("aria-button").setAttribute('aria-pressed', 'true');
             document.getElementById("buttonResponse").innerHTML = "You pressed the button!";
