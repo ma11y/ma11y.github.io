@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+		<HTML LANG="en">
+
+<HEAD>
+    <Title>
+        Button
+    </Title>
+</HEAD>
+
+<BODY>
+<script>
+  function togglePressed() {
+var btn = document.getElementById("aria-button");
+var btnpressed = btn.getAttribute("aria-pressed");
+
+    if (btnpressed == 'true') {
+      document.getElementById("aria-button").setAttribute('aria-pressed', 'false');
+    }
+    else {
+      document.getElementById("aria-button").setAttribute('aria-pressed', 'true');
+    }
+  }
+</script>
+
+<p>
+<a href="aria.html">ARIA</a>
+</p>
+
+<h2>ARIA button pressed role</h2>
+
+<button onclick="togglePressed()" role="button" aria-pressed="true" id="aria-button">Click me</button>
+
+
+</BODY>
+</HTML>
+
+document.getElementById("aria-button")
