@@ -10,8 +10,7 @@
     function togglePressed() {
         var box = document.getElementById("aria-checkbox");
         var boxchecked = box.getAttribute("aria-checked");
-
-            
+        
         if (boxchecked == 'false') {
             document.getElementById("aria-checkbox").setAttribute('aria-checked', 'true');
             document.getElementById("checkboxResponse").innerHTML = "You checked the box!";
