@@ -1,0 +1,14 @@
+<html>
+<body>
+<h3>SVG</h3>
+This is a test to see if a screenreader can properly announce text embedded inside inline SVG.<p>
+<svg version="1.1" width="200" height="50" aria-labelledby="title desc">
+<title id="title">Green rectangle</title>
+<desc id="desc">A light green rectangle with rounded corners and a dark green border.</desc>
+<rect width="195" height="45" rx="20" ry="20" fill="#90ee90" stroke="#228b22" stroke-fill="1" />
+<text x="100" y="30" font-size="1em" text-anchor="middle" fill="#000000">It's not easy being green</text>
+</svg>
+<p>
+This is text outside the svg tags
+<body>
+</html>

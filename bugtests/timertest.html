@@ -1,0 +1,44 @@
+<html>
+<title>
+Timer Test
+</title>
+<head>
+    <Script>
+    function countdown(element, minutes, seconds) {
+// set time for the particular countdown
+var time = minutes*60 + seconds;
+var interval = setInterval(function() {
+    var TimeLeft = document.getElementById('element');
+    // if the time is 0 then end the counter
+    if(time == 0) {
+        setTimeout(function() {
+            TimeLeft.innerHTML = "Restart...";
+        }, 10);
+
+
+        clearInterval(interval);
+
+        setTimeout(function() {
+            countdown('clock', 0, 90);
+        }, 2000);
+    }
+    var minutes = Math.floor( time / 60 );
+    var seconds = time % 60;
+    if (seconds < 10) seconds = "0" + seconds; 
+    var text = minutes + ':' + seconds;
+    TimeLeft.innerHTML = text;
+    time--;
+}, 1000);
+}
+countdown('clock', 0, 90);
+    </script>
+</head>
+
+<body>
+<h1>Timer test</h1>
+</br>
+
+   <label for="element">Time remaining:</label> <span id="element"role="timer" >TimeLeft</span>
+</body>
+
+ </html>

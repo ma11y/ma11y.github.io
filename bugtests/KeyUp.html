@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+ <head>
+ <title>Keyup test</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    $("#gsearch").keyup(function(event) {
+                alert(event.keyCode);
+            }); 
+  });
+
+
+  </script>
+ </head>
+<body>
+<div id="main" role="main">Enter text: 
+	<input title="input" type="search" id="gsearch" value=""></input>
+</div>
+ </body>
+</html>

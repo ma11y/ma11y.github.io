@@ -1,0 +1,35 @@
+<html><head>
+	<title>page title</title>
+	<script type="text/javascript">
+		function toggleMenu() {
+			if (document.getElementById("menu").style.display == "none") {
+				document.getElementById("menu").style.display = "block";
+				document.getElementById("button").setAttribute("aria-expanded", true);
+			} else {
+				document.getElementById("menu").style.display = "none";
+				document.getElementById("button").setAttribute("aria-expanded", false);
+			}
+		}
+
+		function getCode() {
+			document.getElementById("code").value = document.getElementById("nav").outerHTML;
+		}
+	</script>
+</head>
+<body>
+	<h1>page title</h1>
+	<div id="nav" role="navigation">
+		<button aria-expanded="true" onclick="toggleMenu()" id="button">Menu</button>
+		<div id="menu" style="display: block;">
+			<a href="1">Page 1</a><br>
+			<a href="2">Page 2</a><br>
+			<a href="3">Page 3</a><br>
+			<a href="4">Page 4</a><br>
+			<a href="5">Page 5</a>
+		</div>
+	</div>
+	<input type="button" value="Get Code" onclick="getCode()">
+	<textarea aria-hidden="true" style="width: 100%; height: 200px; border: 1px solid black;" id="code"></textarea>
+
+
+</body></html>

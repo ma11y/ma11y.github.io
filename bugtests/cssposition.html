@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--VoiceOver doesn't like float:none; and display: inline-block; reads radio buttons as 1 of 1 
+	can we use the ipod design? as this design uses float: left; and display: block;
+	https://2x-assess-smoke2.talentsuite.swglab.ibm.com/2xAssess/-->
+	
+	<head>
+		<meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<title>CSS Positioning Issue</title>
+		<meta content="baseTestLayout" name="layout">
+		<style>
+			.text{
+				float: left;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div role="main" >
+			<div needresponse="true" aria-labelledby="question1" role="radiogroup">
+				<p id="question1">
+					1. This is a sample Likert.
+				</p>
+				<div>
+					<input type="radio" id="likert_item_0" value="5" name="likert_0"  >
+					<label for="likert_item_0">
+						Disagree
+					</label>
+				</div>
+				<div>
+					<input type="radio" id="likert_item_1" value="6" name="likert_0"  >
+					<label for="likert_item_1">
+						Not sure/in between
+					</label>
+				</div>
+				<div>
+					<input type="radio" id="likert_item_2" value="7" name="likert_0"  >
+					<label for="likert_item_2">
+						Agree
+					</label>
+				</div>
+			</div>
+			<div needresponse="true" aria-labelledby="question2" role="radiogroup">
+				<p id="question2">
+					2. Changed Example text to allow better differentiation
+				</p>
+				<div>
+					<input type="radio" class="text" id="likert0" value="8" name="likert_1"  >
+					<label for="likert0">
+						<span class="text" >Disagree</span>
+					</label>
+				</div>
+				<div>
+					<input type="radio" id="likert1" class="text" value="9" name="likert_1"  >
+					<label for="likert1">
+						<span class="text" >Not sure/in between</span>
+					</label>
+				</div>
+				<div>
+					<input type="radio" id="likert2" class="text" value="A" name="likert_1"  >
+					<label for="likert2">
+						<span class="text" >Agree</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

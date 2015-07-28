@@ -1,0 +1,217 @@
+<style>
+
+.table {
+	display: table;
+	width: 100%;
+}
+
+.row {
+	display: table-row;
+}
+
+.cell {
+	display: table-cell;
+}
+
+.autoWidthCell {
+	width: 100%;
+}
+
+.ipsative .cell {
+	border-bottom: 1px solid #a6a8ab;
+}
+
+.ipsative .header .cell {
+	border: none;
+	padding: 0 5px;
+	font-size: 14px;
+}
+
+.ipsative .responseText {
+	width: 600px;
+	min-width: 320px;
+	padding: 20px 0;
+}
+
+.ipsative .header .responseText {
+	padding: 0;
+}
+
+.ipsative .answer {
+	min-width: 80px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.ipsative .answer .button {
+	padding: 10px;
+}
+
+.ipsative .answer .text {
+	content: "      ";
+	display: inline-block;
+	margin-left: 20px;
+	position: relative;
+	text-indent: -9999em;
+	white-space: nowrap;
+	max-width: 320px;
+}
+
+.ipsative .radio.selected div:before {
+	content: "       ";
+	background-position: -1px -183px;
+	border-color: #ffffff;
+}
+
+.ipsative .radio.selected:hover div:before {
+	content: "        ";
+	background-position: -1px -207px;
+}
+
+.ipsative .answers .hidden {
+	visibility: hidden;
+}
+
+@media (max-width: 767px) {
+	.ipsative {
+		display: block;
+	}
+
+	.ipsative .row {
+		display: block;
+		clear: both;
+		overflow: auto;
+	}
+
+	.ipsative .header {
+		display: none;
+	}
+
+	.ipsative .responseText {
+		border: none;
+		padding-bottom: 10px;
+		min-width: 0;
+	}
+
+	.ipsative .first .responseText {
+		padding-top: 0;
+	}
+
+	.ipsative .answer {
+		float: left;
+		width: 50%;
+		border: none;
+	}
+
+	.ipsative .answer .button {
+		border: 1px solid #a6a8ab;
+		display: block;
+		margin-right: 10px;
+		text-align: left;
+	}
+
+	.ipsative .answer:last-child .button {
+		margin: 0 0 0 10px;
+	}
+
+	.ipsative .answer .button:hover {
+		border-width: 2px;
+		padding: 9px;
+	}
+
+	.ipsative .answer .selected {
+		background-color: #e6e7e8;
+	}
+
+	.ipsative .answer .text {
+		padding-left: 10px;
+		text-indent: 0;
+		white-space: normal;
+	}
+
+	.ipsative .radio.selected div:before {
+		content: "       ";
+		background-position: -1px -231px;
+		border-color: #e6e7e8;
+	}
+
+	.ipsative .radio.selected:hover div:before {
+		content: "         ";
+		background-position: -1px -255px;
+	}
+}
+</style>
+
+<div class="question_area_container">
+	<h2 class="questionHeader">Question 1 of 1</h2>
+	<div class="questionText">
+		You observe an associate slipping an item from the counter into his pocket. You suspect that he is stealing the item. What would you do? Choose the BEST and WORST response.
+	</div>
+	<div class="table answers_panel best_worst_area ipsative " item_id="54474d2de7934bf380a96c225dfc807a">
+		<div class="row header">
+			<div class="cell responseText"></div>
+			<div class="cell answer">Best</div>
+			<div class="cell answer">Worst</div>
+		</div>
+		<div class="row response first">
+			<div itemresponseid="a1f203dcff5d4f2a8b07b22ceb83762c" id="a1f203dcff5d4f2a8b07b22ceb83762c" class="cell responseText">Confront the associate directly.</div>
+			<div class="cell answer">
+				<label class="button radio ">
+					<input type="radio" value="1" aria-describedby="a1f203dcff5d4f2a8b07b22ceb83762c" name="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af-best" id="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af_0">
+					<div class="text">Best</div>
+				</label>
+			</div>
+			<div class="cell answer">
+				<label class="button radio ">
+					<input type="radio" value="-1" aria-describedby="a1f203dcff5d4f2a8b07b22ceb83762c" name="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af-worst" id="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af_0">
+					<div class="text" id="worst">Worst</div>
+				</label>
+			</div>
+		</div>
+		<div class="row response">
+			<div itemresponseid="077bc39351f44737a786ebaafe36821d" id="077bc39351f44737a786ebaafe36821d" class="cell responseText">Do nothing right away, but watch the associate closely.</div>
+			<div class="cell answer">
+				<label class="button radio ">
+					<input type="radio" value="1" aria-labelledby="077bc39351f44737a786ebaafe36821d" name="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af-best" id="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af_1">
+					<div class="text" id="best">Best</div>
+				</label>
+			</div>
+			<div class="cell answer">
+				<label class="button radio ">
+					<input type="radio" value="-1" aria-labelledby="077bc39351f44737a786ebaafe36821d" name="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af-worst" id="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af_1">
+					<div class="text" id="worst">Worst</div>
+				</label>
+			</div>
+		</div>
+		<div class="row response">
+			<div itemresponseid="d1b9e376c91b4d5c84961e1c1dad6d7a" class="cell responseText">Tell your manager what happened.</div>
+			<div class="cell answer">
+				<label class="button radio ">
+					<input type="radio" value="1" name="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af-best" id="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af_2">
+					<div class="text">Best</div>
+				</label>
+			</div>
+			<div class="cell answer">
+				<label class="button radio ">
+					<input type="radio" value="-1" name="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af-worst" id="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af_2">
+					<div class="text">Worst</div>
+				</label>
+			</div>
+		</div>
+		<div class="row response">
+			<div itemresponseid="d8861499f49c41e6b8efbaf8c2f1c7eb" class="cell responseText">Alert the police.</div>
+			<div class="cell answer">
+				<label class="button radio ">
+					<input type="radio" value="1" name="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af-best" id="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af_3">
+					<div class="text">Best</div>
+				</label>
+			</div>
+			<div class="cell answer">
+				<label class="button radio ">
+					<input type="radio" value="-1" name="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af-worst" id="radio_ans_91235b25-d972-426c-8c31-ab1c568f91af_3">
+					<div class="text">Worst</div>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
