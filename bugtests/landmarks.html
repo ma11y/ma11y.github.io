@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<HTML LANG="en">
+
+<HEAD>
+    <Title>
+        ARIA landmarks and document sections
+    </Title>
+</HEAD>
+
+<BODY>
+    <p>
+        <a href="http://ma11y.github.io">HOME</a>
+    </p>
+    <!-- Taking out the application landmark just in case it's causing issues
+    <h1>ARIA document sections</h1>
+    <div role="application">
+        <p>application section</p>
+        <button value="press me, nothing happens"></button>
+    </div>
+    -->
+    <div role="banner">
+        <p>Banner section</p>
+        <div role="search">
+            <p>Search section nested in banner</p>
+        </div>
+    </div>
+    <div role="navigation">
+        <p>Navigation section</p>
+    </div>
+    <div role="main">
+        <p>Main section</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div role="region" aria-label="My Nested region">
+            <p>This sentence is in a generic region nested inside of the main landmark</p>
+        </div>
+        <p>This is the last paragraph of the main landmark</p>
+    </div>
+    <div role="complementary">
+        <p>Complementary section</p>
+        <p>Here is some good, related information</p>
+    </div>
+    <div role="contentinfo">
+        <p>This is a contentinfo section. Following this section are several other landmark roles.</p>
+    </div>
+    <div role="article">
+        <p>article section</p>
+    </div>
+    <div role="document">
+        <p>Document section</p>
+    </div>
+    <div role="form">
+        <p>Form section</p>
+        <button value="press me"></button>
+    </div>
+    <div role="heading">
+        <p>Heading section</p>
+    </div>
+    <div role="img">
+        <p>Img section</p>
+    </div>
+    <div role="landmark">
+        <p>Landmark section</p>
+    </div>
+    <div role="log">
+        <p>Log section</p>
+    </div>
+    <div role="marquee">
+        <p>Marquee section</p>
+    </div>
+    <div role="note">
+        <p>Note section</p>
+    </div>
+    <div role="presentation">
+        <p>Presentation section</p>
+    </div>
+    <div role="section">
+        <p>Section section</p>
+    </div>
+    <div role="sectionhead">
+        <p>Sectionhead section</p>
+    </div>
+    <div role="separator">
+        <p>Separator section</p>
+    </div>
+    <div role="status">
+        <p>Status section</p>
+    </div>
+    <div role="timer">
+        <p>Timer section</p>
+    </div>
+    <p>
+        iOS 8.4: Reads: Application, banner, complementary, contentinfo, heading, main, navigation, search, section, sectionhead. The other sections are not read.
+    </p>
+</BODY>
+
+</HTML>
