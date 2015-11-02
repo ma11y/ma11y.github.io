@@ -1,34 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title>Aria Label Test</title>
 </head>
 <body>
+<header role="banner">
+<a href="index.html">Component index</a>
+<hr>
+</header>
+<main role="main">
+<h1>ARIA label test</h1>
+<!-- Component start -->
   <div aria-label="Label text 1">
     This is a div with aria-label text.
   </div>
   <div aria-label="Label text 1" role="radiogroup">
     This is a div with role="radiogroup" and aria-label text.
-  </div>
-  <div aria-label="Label text 1" role="radio">
+    <div id="r1" tabindex="0" aria-label="Label text 1" role="radio" aria-checked="true">
     This is a div with role="radio" and aria-label text.
   </div>
-  <input aria-label="Label text 1" type="text" value="This is an input with aria-label text.">
+  </div>
+  <input aria-label="Label text 1" type="text" value="Input with aria-label text.">
   <br>
   <br>
   <div id="label">Label text 2 (to be used in aria-labelledby)</div>
   <br>
   <div aria-labelledby="label">
-    This is a div with aria-label text.
+    This is a div with aria-labelledby text.
   </div>
   <div aria-labelledby="label" role="radiogroup">
     This is a div with role="radiogroup" and aria-labelledby text.
-  </div>
-  <div aria-labelledby="label" role="radio">
+ 
+  <div id="r2" tabindex="-1" aria-labelledby="label" role="radio" aria-checked="false">
     This is a div with role="radio" and aria-labelledby text.
   </div>
-  <input aria-labelledby="label" type="text" value="This is an input with aria-labelledby text.">
+   </div>
+  <input aria-labelledby="label" type="text" value="Input with aria-labelledby text.">
   <hr>
   <div>
     <div>
@@ -60,5 +68,11 @@
       </div>
     </div>
   </div>
+  <!-- Component end -->
+</main>
+<footer role="contentinfo">
+<hr>
+<a href="index.html">Component index</a>
+</footer>
 </body>
 </html>
