@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <title>Accessible Placeholder Demo</title>
 </head>
 <body>
-<h1>Welcome to a featureless logon page</h1>
+<header role="banner">
+<a href="index.html">Component index</a>
+<hr>
+</header>
+<main role="main">
+<h1>Accessible Placeholder Demo</h1>
+<!-- Component start -->
+<h2>Welcome to a featureless logon page</h2>
 <form>
 <input type="text" id="username" name="username" placeholder="User name" aria-label="User name:"><br>
 <input type="password" id="password" name="password" placeholder="Password" aria-label="Password:"><br>
 <input type="submit" value="Log in">
 </form>
+<!-- Component end -->
+</main>
+<footer role="contentinfo">
+<hr>
+<a href="index.html">Component index</a>
+</footer>
 </body>
 </html>

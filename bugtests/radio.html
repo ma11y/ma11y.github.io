@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<title>Radio Group Example</title>
+		<meta content="baseTestLayout" name="layout">
+		<style>
+			.text{
+				float: left;
+				display: block;
+			}
+		</style>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js">
+		</script>
+		<script>
+			function putfocus()
+			{
+			   var focused = $('#likert_item_0');
+			   focused.focus();
+			}
+		</script>
+		<title>Radio button, required</title>
+		</head>
+	<body>
+	<header role="banner">
+	<a href="index.html">Component index</a>
+	<hr>
+	</header>
+	<main role="main">
+	<h1>Radio button, required</h1>
+	<!-- Component start -->
+		<div>
+			<div needresponse="true" aria-labelledby="question1" role="radiogroup" aria-required="true">
+				<p id="question1">
+					This is a sample Likert.
+				</p>
+				<div>
+					<input type="radio" id="likert_item_0" value="5" name="likert_0" >
+					<label for="likert_item_0">
+						Disagree
+					</label>
+				</div>
+				<div>
+					<input type="radio" id="likert_item_1" value="6" name="likert_0">
+					<label for="likert_item_1">
+						Not sure/in between
+					</label>
+				</div>
+				<div>
+					<input type="radio" id="likert_item_2" value="7" name="likert_0">
+					<label for="likert_item_2">
+						Agree
+					</label>
+				</div>
+			</div>
+			<div needresponse="true" aria-labelledby="question2" role="radiogroup">
+				<p id="question2">
+					Changed Example text to allow better differentiation
+				</p>
+				<div>
+					<input type="radio" class="text" id="likert0" value="8" name="likert_1">
+					<label for="likert0">
+						<span class="text">Disagree</span>
+					</label>
+				</div>
+				<div>
+					<input type="radio" id="likert1" class="text" value="9" name="likert_1">
+					<label for="likert1">
+						<span class="text">Not sure/in between</span>
+					</label>
+				</div>
+				<div>
+					<input type="radio" id="likert2" class="text" value="A" name="likert_1">
+					<label for="likert2">
+						<span class="text">Agree</span>
+					</label>
+				</div>
+			</div>
+		</div>
+<br/>
+<br/>
+<div>	
+<input type="button" value="Next" class="primary disabled" title="Next" id="nextBottomButton" role="button" style="visibility: visible;" onclick="putfocus()">
+<input type="button" value="Cancel assessment" title="Cancel assessment" buttons="Cancel assessment,Continue assessment" go="" class="action" id="abort_link" style="visibility: visible;">
+</div>
+<!-- Component end -->
+</main>
+<footer role="contentinfo">
+<hr>
+<a href="index.html">Component index</a>
+</footer>
+</body>
+</html>

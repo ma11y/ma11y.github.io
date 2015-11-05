@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/></head>
+<head>
+<title>Test of various lang attributes</title>
+</head>
+<body>
+<header role="banner">
+<a href="index.html">Component index</a>
+<hr>
+</header>
+<main role="main">
+<h1>Abbreviation</h1>
+<!-- Component start -->
 <body>
 <h1>Test of various lang attributes</h1>
 <label for="choices">Choices</label>
     <select id="choices"><option lang="zh">中文简体(CN)</option></select><br/>
-    <select multiple><option lang="zh">中文简体(CN)</option></select><br/>
+    <label for="multiple">Multiple Choices</label>
+	<select id="multiple" multiple><option lang="zh">中文简体(CN)</option></select><br/>
     <span tabindex="0" lang="zh">中文简体(CN)</span>
+<!-- Component end -->
+</main>
+<footer role="contentinfo">
+<hr>
+<a href="index.html">Component index</a>
+</footer>
 </body>
 </html>
