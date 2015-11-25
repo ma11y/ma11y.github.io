@@ -7,7 +7,14 @@
 <title>HTML 5</title>
 </head>
 <body>
+
+<header role="banner">
 <a href="http://ma11y/github.com/index.html">Home</a>
+<hr>
+</header>
+<main role="main">
+
+
 
 <h1>HTML 5</h1>
 <ul>
@@ -19,8 +26,18 @@
 <li><a href="table.html">Table</a></ul>
 
 </ul>
-</body>
+
+
+</main>
+<footer role="contentinfo">
+<hr>
+<form>
+<input type="button" value="Feedback" onclick="msg()">
+</form>
+<script>
+function msg() {
+	alert("This will launch an ability for someone to provide feedback on this component. We need to capture the originating page in the info we send out");
+}
+</script>
+</footer>
 </html>
-
-
-
