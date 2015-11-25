@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<HTML LANG="en">
+
+<HEAD>
+    <Title> ARIA Button Pressed Example</Title>
+</HEAD>
+
+<BODY>
+    <script>
+    function togglePressed() {
+        var btn = document.getElementById("aria-button");
+        var btnpressed = btn.getAttribute("aria-pressed");
+        
+        if (btnpressed == 'false') {
+            document.getElementById("aria-button").setAttribute('aria-pressed', 'true');
+            document.getElementById("buttonResponse").innerHTML = "You pressed the button!";
+        }
+    }
+    </script>
+
+<header role="banner">
+        <a href="aria.html">ARIA</a>
+<hr>
+</header>
+<main role="main">
+
+    <h1>ARIA button pressed role</h1>
+    <button onclick="togglePressed()" role="button" aria-pressed="false" id="aria-button">Click me</button>
+    <p id="buttonResponse">Button not pressed</p>
+
+<p>
+iOS 9.01: works as expected. When the button is not pressed, iOS announces "not pressed". When the button is pressed, iOS announces "checked" and status changes to "pressed".
+</p>
+<p>
+iOS 8.4:
+Button is announced as checkbox without the status. When button is pressed, the status doesn't change. With iOS 8.x or lower versions, it is not usable.
+</p>
+
+
+</main>
+<footer role="contentinfo">
+<hr>
+<form>
+<input type="button" value="Feedback" onclick="msg()">
+</form>
+<script>
+function msg() {
+	alert("This will launch an ability for someone to provide feedback on this component. We need to capture the originating page in the info we send out");
+}
+</script>
+</footer>
+</html>

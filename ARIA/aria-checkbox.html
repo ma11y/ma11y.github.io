@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<HTML LANG="en">
+
+<HEAD>
+    <Title> ARIA checkbox</Title>
+</HEAD>
+
+<BODY>
+    <script>
+    function togglePressed() {
+        var box = document.getElementById("aria-checkbox");
+        var boxchecked = box.getAttribute("aria-checked");
+
+        if (boxchecked == 'false') {
+            document.getElementById("aria-checkbox").setAttribute('aria-checked', 'true');
+            document.getElementById("checkboxImg").src = "http://www.oaa-accessibility.org/media/examples/images/checkbox-checked-black.png"
+            document.getElementById("checkboxResponse").innerHTML = "You checked the box!";
+        }
+    }
+    </script>
+
+
+<header role="banner">
+        <a href="aria.html">ARIA</a>
+<hr>
+</header>
+<main role="main">
+
+    <h1>ARIA checkbox</h1>
+    <div onclick="togglePressed()" role="checkbox" aria-checked="false" id="aria-checkbox"><img id="checkboxImg" src="http://www.oaa-accessibility.org/media/examples/images/checkbox-unchecked-black.png" role="presentation"> </div>
+    <p id="checkboxResponse">Box not checked</p>
+<p>
+iOS 9.01, 8.4:
+Works as expected, announces as checkbox, checked and unchecked status is announced.
+
+</p>
+
+</main>
+<footer role="contentinfo">
+<hr>
+<form>
+<input type="button" value="Feedback" onclick="msg()">
+</form>
+<script>
+function msg() {
+	alert("This will launch an ability for someone to provide feedback on this component. We need to capture the originating page in the info we send out");
+}
+</script>
+</footer>
+</html>
