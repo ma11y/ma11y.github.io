@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Styling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!--     <h1>Form Styling</h1>
+    <form action="" method="post">
+        <div id="input" class="myForm">
+            <p>
+                <label for="passcode">8675309 - </label>
+                <input id="passcode" type="text" name="textfield">
+            </p>
+            <p>
+                <input type="submit" value="Submit" name="submit">
+            </p>
+            <p>Well.. isn't this SSO fancy.</p>
+        </div>
+    </form> -->
+    <form autocomplete="off" action="" method="POST">
+        <input id="otphint" type="hidden" value="8675309" name="otp.user.otp-hint">
+        <input type="hidden" value="verify" name="operation">
+        <div id="mappingRuleDataDiv" class="hidden"> </div>
+        <h3>Enter your passcode</h3>
+        <p id="deliveryLabel">A passcode was sent as an SMS message to the phone number associated with your IBM w3 profile.</p>
+        <div id="errorDiv" class="hidden error"> </div>
+        <div class="passcode">
+            8675309-
+            <input id="otppswd" type="text" pattern="[0-9]*" maxlength="40" name="otp.user.otp">
+        </div>
+        <input type="submit" value="Submit" name="Submit">
+    </form>
+</body>
+
+</html>

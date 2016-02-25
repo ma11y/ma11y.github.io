@@ -1,0 +1,116 @@
+    body {
+    background-color: white;
+}
+
+h3 {
+    color: #198cbf;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "HelvNeueLightforIBM", Arial, sans-serif;
+    font-size: 44px;
+    font-weight: 300;
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+p {
+    color: #777677;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "HelvNeueLightforIBM", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 26px;
+    margin: 5px 0 15px;
+}
+
+.passcode {
+    color: #4a4a4a;
+    display: inline-block;
+    font-family: "HelvNeueLightforIBM", Arial, sans-serif;
+    font-size: 32px;
+    font-weight: 100;
+    letter-spacing: 6px;
+}
+
+.passcode input {
+    -moz-appearance: none;
+    background-color: #eee;
+    border-radius: 0;
+    font-family: "HelvNeueBoldforIBM", Arial, sans-serif;
+    height: 60px;
+    letter-spacing: 6px;
+    margin-left: -5px;
+    padding-top: 18px;
+    width: 336px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    background-color: #efeeef;
+    border: 0 none;
+    color: #000;
+    display: inline-block;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+input {
+    -moz-appearance: none;
+    border: 0 none;
+    outline: medium none;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+input {
+    line-height: normal;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+input[type="text"]::-moz-placeholder,
+input[type="email"]::-moz-placeholder,
+input[type="number"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder {
+    color: #000;
+}
+
+input[type="submit"],
+button {
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 2px solid #198cbf;
+    border-radius: 0;
+    color: #198cbf;
+    display: block;
+    font-family: "HelvNeueBoldforIBM", Arial, sans-serif;
+    font-size: 22px;
+    height: 60px;
+    line-height: 58px;
+    margin: 30px 0;
+    width: 200px;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    border: 2px solid #325c80;
+    color: #325c80;
