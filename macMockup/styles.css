@@ -1,0 +1,91 @@
+    body {
+        background-color: #f0f0f0;
+    }
+    
+    h1 {
+        color: #198cbf;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "HelvNeueLightforIBM", Arial, sans-serif;
+        font-size: 44px;
+        font-weight: 300;
+        margin: 0 0 30px;
+        padding: 0;
+        text-align: center;
+    }
+    
+    p {
+        color: #777677;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "HelvNeueLightforIBM", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        margin: 5px 0 15px;
+    }
+    /* MAC Source */
+    /*Grid need a explicit width/height by default*/
+    
+    .claro .dojoxGrid {
+        margin-left: 100px;
+    }
+    
+    .dojoxGrid .dojoxGridCell {
+        font-size: 12pt;
+        text-align: center;
+    }
+    
+    .claro .dojoxGridRow {
+        background-color: #e1e1e1;
+    }
+    
+    .claro .dojoxGridRowOdd {
+        background-color: #aaaaaa;
+    }
+    
+    .claro .dojoxGridHeader,
+    .tundra .dojoxGridHeader .dojoxGridCell {
+        /*   vertical-align: bottom;*/
+        color: #333;
+        /* #FFFFFF !important;*/
+        text-align: center;
+        background: #848484;
+        border-color: #ECE2D8;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    /* Marc Added */
+    
+    .welcome {
+        text-align: right;
+        margin: 0 auto;
+        padding-right: 40px;
+        font-size: 18px;
+        color: #198cbf;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "HelvNeueLightforIBM", Arial, sans-serif;
+    }
+    
+    .dijitContentPane {
+        margin-right: 20px;
+        t text-align: center;
+        float: left;
+        font-size: 14px;
+        height: 400px;
+        width: 40%;
+        overflow: auto;
+        padding-top: 20px;
+        display: inline-block;
+        border: 2px solid rgb(25, 140, 191);
+        background-color: #fff;
+    }
+    
+    .MAC_reports {
+        color: #777677;
+        font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "HelvNeueLightforIBM", Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 26px;
+        margin: 5px 0 15px;
+    }
+    
+    hr.hrStyle {
+        width: 50%;
+        color: #776777;
+    }
