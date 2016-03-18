@@ -2,10 +2,7 @@
 <HTML LANG="en">
 
 <HEAD>
-    <Title> ARIA checkbox</Title>
-</HEAD>
-
-<BODY>
+    <Title>ARIA checkbox</Title>
     <script>
     function togglePressed() {
         var box = document.getElementById("aria-checkbox");
@@ -13,23 +10,27 @@
 
         if (boxchecked == 'false') {
             document.getElementById("aria-checkbox").setAttribute('aria-checked', 'true');
-            document.getElementById("checkboxImg").src = "http://www.oaa-accessibility.org/media/examples/images/checkbox-checked-black.png"
+            document.getElementById("checkboxImg").src = "http://www.oaa-accessibility.org/media/examples/images/checkbox-checked-black.png";
             document.getElementById("checkboxResponse").innerHTML = "You checked the box!";
+        } else {
+            document.getElementById("aria-checkbox").setAttribute('aria-checked', 'false');
+            document.getElementById("checkboxImg").src = "http://www.oaa-accessibility.org/media/examples/images/checkbox-unchecked-black.png";
+            document.getElementById("checkboxResponse").innerHTML = "You cleared the box!";
         }
     }
     </script>
+</HEAD>
+
+<BODY>
     <p>
         <a href="aria.html">ARIA</a>
     </p>
     <h2>ARIA checkbox</h2>
-    <div onclick="togglePressed()" role="checkbox" aria-checked="false" id="aria-checkbox"><img id="checkboxImg" src="http://www.oaa-accessibility.org/media/examples/images/checkbox-unchecked-black.png" role="presentation"> </div>
+    <div onclick="togglePressed()" role="checkbox" aria-checked="false" id="aria-checkbox"><img id="checkboxImg" src="http://www.oaa-accessibility.org/media/examples/images/checkbox-unchecked-black.png" alt="" role="presentation"> </div>
     <p id="checkboxResponse">Box not checked</p>
-<p>
-iOS 9.01, 8.4:
-Works as expected, announces as checkbox, checked and unchecked status is announced.
-
-</p>
-
+    <p>
+        iOS 9.01, 8.4: Works as expected, announces as checkbox, checked and unchecked status is announced.
+    </p>
 </BODY>
 
 </HTML>
