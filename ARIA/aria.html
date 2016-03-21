@@ -1,49 +1,42 @@
 <!DOCTYPE html>
-<HTML LANG="en">
+<html lang="en">
 
-<HEAD>
-    <Title>
-ARIA
-    </Title>
-</HEAD>
+<head>
+    <meta name="viewport" content="width=device-width, minimal-ui">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <title>ARIA Code Samples</title>
+</head>
 
-<BODY>
+<body>
+    <!-- Header w/ breadcrumb (Adjust breadcrumb links as needed) -->
+    <header role="banner">
+        <nav role="navigation">
+            <a href="../index.html">Home</a>
+        </nav>
+        <hr>
+    </header>
+    <main role="main">
+        <h1>ARIA Code Samples</h1>
+        <ul>
+            <li><a href="aria-alert.html">aria-alert role</a></li>
+            <li><a href="aria-alertdialog.html">ARIA alertdialog</a></li>
+            <!-- <li><a href="aria-docstructure.html">aria document sections</a></li> -->
+            <li><a href="aria-autocomplete.html">aria-autocomplete</a></li>
+            <li><a href="aria-describedby.html">aria-describedby</a></li>
+            <li><a href="aria-headings.html">ARIA headings</a></li>
+            <li><a href="aria-labelledby.html">aria-labelledby</a></li>
+            <li><a href="aria-buttonpressed.html">aria-pressed</a></li>
+            <li><a href="aria-checkbox.html">aria-checkbox</a></li>
+            <li><a href="aria-list.html">aria-list</a></li>
+            <li><a href="aria-required.html">aria-required</a></li>
+            <!-- <li><a href="aria-roles.html">aria Roles</a></li> -->
+            <li><a href="aria-slider.html">aria slider</a></li>
+        </ul>
+    </main>
+    <footer role="contentinfo">
+        <hr>
+    </footer>
+</body>
 
-<header role="banner">
-<a href="http://ma11y.github.com/index.html">HOME</a>
-<hr>
-</header>
-<main role="main">
-
-
-
-<ul>
-<li><a href="aria-alert.html">aria-alert role</a></li>
-<li><a href="aria-alertdialog.html">aria-alertdialog</a></li>
-<li><a href="aria-docstructure.html">aria document sections</a></li>
-<li><a href="aria-autocomplete.html">aria-autocomplete</a></li>
-<li><a href="aria-describedby.html">aria-describedby</a></li>
-<li><a href="aria-headings.html">aria headings</a></li>
-<li><a href="aria-labelledby.html">aria-labelledby</a></li>
-<li><a href="aria-buttonpressed.html">aria-pressed</a></li>
-<li><a href="aria-checkbox.html">aria-checkbox</a></li>
-<li><a href="aria-list.html">aria-list</a></li>
-<li><a href="aria-required.html">aria-required</a></li>
-<li><a href="aria-roles.html">aria Roles</a></li>
-<li><a href="aria-slider.html">aria slider</a></li>
-
-    </ul>
-
-</main>
-<footer role="contentinfo">
-<hr>
-<form>
-<input type="button" value="Feedback" onclick="msg()">
-</form>
-<script>
-function msg() {
-	alert("This will launch an ability for someone to provide feedback on this component. We need to capture the originating page in the info we send out");
-}
-</script>
-</footer>
 </html>
