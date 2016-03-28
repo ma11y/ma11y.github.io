@@ -75,11 +75,13 @@ p {
     text-align: right;
     margin: 0 auto;
     padding-right: 40px;
-    padding-top: 10px;
+    padding-top: 5px;
     font-size: 18px;
     color: #fff;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", "HelvNeueLightforIBM", Arial, sans-serif;
 }
+
+
 
 .dijitContentPane {
     margin-right: 20px;
