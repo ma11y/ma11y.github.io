@@ -1,38 +1,56 @@
-<!--Copyright (c) 2016 IBM Corporation
+<!DOCTYPE html>
+<html lang="en">
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.-->
-<!DOCTYPE HTML>
-<html lang = "en">
 <head>
-<title>file</title>
+    <meta name="viewport" content="width=device-width, minimal-ui">
+    <meta charset="utf-8">
+    <!-- Adjust link to stylesheet as needed -->
+    <link rel="stylesheet" type="text/css" href="../../style.css">
+    <title>File Input - Explicit Labeling</title>
 </head>
+
 <body>
-<form>
-<fieldset>
-<legend>File</legend>
-<p>
-<label for="files">Select file to upload...</label>
-<input type="file" name="filename" value="Browe file" id="files"/></p><br>
-</fieldset>
-<p>
-<input type="submit" value="Submit">
-<input type="submit" value="Cancel"></p><br>
-</form>
+    <!-- Header w/ breadcrumb (Adjust breadcrumb links as needed) -->
+    <header role="banner">
+        <nav role="navigation">
+            <a href="../../index.html">Home</a> > <a href="../html5.html">HTML5</a> > <a href="formLabeling.html"> Form Labeling</a>
+        </nav>
+        <hr>
+    </header>
+    <main role="main">
+        <h1>File Input - Explicit Labeling</h1>
+        <form>
+            <fieldset>
+                <legend>File</legend>
+                <p>
+                    <label for="files">Select a file to upload...</label>
+                    <input type="file" name="filename" id="files" />
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Submit">
+                <input type="button" value="Cancel">
+            </p>
+        </form>
+    </main>
+    <footer role="contentinfo">
+        <hr>
+        <h3>Tested on:</h3>
+        <div>
+            <ul>
+                <li>iOS 9.3.2 and VoiceOver
+                    <ul>
+                        <li>Results:</li>
+                    </ul>
+                </li>
+                <li>Firefox 45 and JAWS 17
+                    <ul>
+                        <li>Results:</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </footer>
 </body>
+
 </html>
